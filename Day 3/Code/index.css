@@ -1,0 +1,28 @@
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: turquoise;
+    height: 50px;
+    align-items: center;
+    margin-top: 10px;
+}
+  
+.logo {
+    width: 50%;
+    height: 50%;
+}
+  
+.searchBar {
+    border: none;
+    height: 40px;
+    width: 900px;
+    border-radius: 2px;
+}
+  
+.icon {
+    width: 50%;
+    height: 50%;
+}
