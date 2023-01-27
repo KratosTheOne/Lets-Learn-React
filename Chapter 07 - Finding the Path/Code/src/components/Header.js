@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // JSX or React element
 const LoggedIn = () => {
@@ -15,9 +15,19 @@ export const Title = () => (
     </a>
 );
 
-const HeaderComponent = () => {
+const HeaderComponent = (user) => {
 
     const [isLoggedIn, setLoggedIn] = useState(false);
+    const navigate = useNavigate();
+  
+    console.log("In Nav Component", user);
+    
+    const toggleLogin = () => {
+      console.log("isLoggedIn", isLoggedIn);
+      setLoggedIn(!isLoggedIn);
+      let params = (!user.authenticated ) ? { state: { authenticated: false } } :  { state: { authenticated: false, msg: "You have logged out of the Food App. " } } ;
+      navigate('/login', params );
+  }
 
     return (
       <div className="header">
@@ -31,11 +41,8 @@ const HeaderComponent = () => {
           </ul>
         </div>
         {//JS Expression
-          isLoggedIn ? (
-            <button onClick={() => setLoggedIn(false)}>Logout</button>
-          ) : (
-            <button onClick={() => setLoggedIn(true)}>Login</button>
-          )}
+          <button className="nav-btn" onClick={() => {toggleLogin()}} > {isLoggedIn?  "Logout" : "Login" } </button>
+        }
       </div>
     );
 };

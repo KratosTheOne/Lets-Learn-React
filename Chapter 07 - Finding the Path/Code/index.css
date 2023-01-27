@@ -58,6 +58,56 @@
     justify-content: space-evenly;
 }
 
+/*Login Form*/
+.login-container {
+    margin-top: 100px;
+    min-height: 36vw;
+    text-align: center;
+    display: flex;
+  }
+  
+  .login-form {
+    border: #686b78 1px solid;
+    flex-basis : 500px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  
+  .login-msg {
+    color: #001d3d;
+    font-size: 18px;
+    font-weight: 800;
+  }
+  
+  .email, .pwd {
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  #email, #pwd {
+    width : 200px;
+  }
+  
+  .email-label, .pwd-label {
+    padding : 10px;
+  }
+  .submit-btn{
+    background-color: #ffc300;
+    color : #001d3d;
+    width : 80px;
+    height: 30px;
+    border-radius: 7px;
+    border: #ffc300;
+    outline: none;
+    font-size: 16px;
+  }
+
+
  .footer {
     margin: 10px;
     border: 1px solid black;
