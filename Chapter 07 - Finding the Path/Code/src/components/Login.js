@@ -26,7 +26,6 @@ const Login = () => {
     }
     return (
         <div className="Login-container">
-            <h1>Login Page</h1>
             <Formik
                 initialValues={{ email: '', password: '' }}
                 validate={values => {
@@ -52,7 +51,7 @@ const Login = () => {
                     <Form className="login-form">
                         <span className='login-msg'>{state.msg ? state.msg : "Welcome to Yum Yum Foods!"} Please Login!</span>
             
-                        <img className="logo" alt="logo" src= ".../Assets/yumyumLogo.jpg" />
+                        <img width="150px" height="150px" className="logo" alt="logo" src= "https://thumbs.dreamstime.com/b/yum-yum-logo-text-cartoon-hand-drawn-calligraphy-style-design-doodle-print-vector-illustration-yum-yum-logo-text-cartoon-hand-176471952.jpg" />
                         {isSubmitting && <div>Loading...</div>}
                         <div className="email">
                             <label htmlFor="email" className="email-label">Email</label>
